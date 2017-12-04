@@ -2,7 +2,7 @@
 
 ## https://github.com/auth0/react-native-lock/blob/master/bin/cocoapods.sh
 
-ios_dir=`pwd`/client-insights-native/ios
+ios_dir=`pwd`/ios
 if [ ! -d $ios_dir ]
   then
   exit 0
@@ -38,7 +38,7 @@ fi
 
 echo "Adding Podfile to iOS project"
 
-cd client-insights-native/ios
+cd ios
 pod init >/dev/null 2>&1
 cat $template >> $podfile
 cd ..
