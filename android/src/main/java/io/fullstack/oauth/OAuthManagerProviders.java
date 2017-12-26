@@ -268,6 +268,9 @@ public class OAuthManagerProviders {
       builder.scope(scopeStr);
     }
 
+    boolean rawScopes = (cfg.containsKey("rawScopes") &&
+      ((String)cfg.get("rawScopes")).equalsIgnoreCase("true"));
+
     if (opts != null && opts.hasKey("scopes")) {
       scopes = (String) opts.getString("scopes");
       String scopeStr = null;
